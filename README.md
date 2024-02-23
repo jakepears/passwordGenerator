@@ -12,7 +12,7 @@ This is a javascript application that generates a random password based on user-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployed Application](https://jakepears.github.io/passwordGenerator/)
-- [Screenshot](./assets/screenshots/deploymentSc.png)
+- [Screenshot](./screenshots/deploymentSc.png)
 - [Credits](#credits)
 - [License](#license)
 
