@@ -5,13 +5,11 @@
 // Function to prompt user for password criteria
 function getPasswordCriteria() {
 	// Get length
-	const length = parseInt(
-		prompt('Enter desired password length (8-128 characters:')
-	);
+	const length = parseInt(prompt('Enter length'));
 
 	// Validate input
-	if (isNaN(length) || length < 8 || length > 128) {
-		alert('Password length must be a number between 8 and 128');
+	if (isNaN(length) || length < 8 || length > 32) {
+		alert('Password length must be a length between 8 and 32 characters');
 		return null;
 	}
 
@@ -43,8 +41,6 @@ const generateBtn = document.getElementById('generate');
 // Write password to the #password input
 function writePassword() {
 	const criteria = getPasswordCriteria();
-
-	const password = generatePassword(criteria);
 
 	const passwordText = document.getElementById('password');
 
@@ -94,6 +90,9 @@ function generatePassword(criteria) {
 			break;
 		}
 	}
+
+	// Trim password
+	password = password.slice(0, criteria.length);
 
 	return password;
 }
