@@ -42,14 +42,14 @@ const generateBtn = document.getElementById('generate');
 function writePassword() {
 	const criteria = getPasswordCriteria();
 
+	const password = generatePassword(criteria);
+
 	const passwordText = document.getElementById('password');
 
 	passwordText.value = password;
 
 	// Generate and display password
 	if (criteria) {
-		const password = generatePassword(criteria);
-
 		document.getElementById('password').value = password;
 	} else {
 		alert('Please provide valid criteria');
